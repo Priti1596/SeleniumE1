@@ -15,16 +15,16 @@ import com.google.common.io.Files;
 public class ByWebElement {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
-		WebDriver driver = new ChromeDriver();// to upcast webdriver interface
+		WebDriver driver = new ChromeDriver();// to Upcast WebDriver interface
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		driver.get("https://instagram.com/");
+		driver.get("https://instagram.com/");//To launch Instagram
 		Thread.sleep(5000);
 		
-		WebElement loginButton = driver.findElement(By.xpath("//div[text()='Log in']"));
+		WebElement loginButton = driver.findElement(By.xpath("//div[text()='Log in']"));// To find login button
 		
-		File src= loginButton.getScreenshotAs(OutputType.FILE);
-		File dest = new File("./screenshots/loginButton.png");
+		File src= loginButton.getScreenshotAs(OutputType.FILE);//To take Screenshot of WebElement
+		File dest = new File("./screenshots/loginButton.png");//To Specify location, name
 		Files.copy(src, dest);
 
 	}
