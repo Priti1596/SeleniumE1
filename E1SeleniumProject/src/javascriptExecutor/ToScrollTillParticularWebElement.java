@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ToScrollTillParticularWebElement {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();//To launch the browser
 		driver.manage().window().maximize();// To maximize browser
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));// To provide Implicit wait
@@ -18,13 +18,14 @@ public class ToScrollTillParticularWebElement {
 		
 		WebElement scrollTarget = driver.findElement(By.xpath("//h2[text() = 'News']"));
 		
-		JavascriptExecutor js = (JavascriptExecutor)driver;// To typecast from Webdriver to JavascriptExecutor
+		JavascriptExecutor js = (JavascriptExecutor)driver;// To Typecast from WebDriver to JavascriptExecutor
 		
-		
-		js.executeScript("arguments[0].scrollIntoView(false)",scrollTarget);
+		//To scroll till particular web element
+		js.executeScript("arguments[0].scrollIntoView(true)",scrollTarget);
 		
 
-		driver.close();
+		Thread.sleep(2000);
+		//driver.close();
 	}
 
 }

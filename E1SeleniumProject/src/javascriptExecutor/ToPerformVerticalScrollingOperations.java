@@ -18,12 +18,12 @@ public class ToPerformVerticalScrollingOperations {
 		
 		JavascriptExecutor js = (JavascriptExecutor)driver;// To typecast from Webdriver to JavascriptExecutor
 		
-		// To perform ScrollDownword operation
+		// To perform ScrollDownward operation
 		js.executeScript("window.scrollBy(0,1000)");
 		
 		Thread.sleep(2000);
 		
-		// To perform ScrollUpword operation
+		// To perform ScrollUpward operation
 		js.executeScript("window.scrollBy(0,-500)");
 		
 		driver.close();

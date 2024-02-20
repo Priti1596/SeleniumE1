@@ -16,12 +16,12 @@ public class ToPerformHorizontalScrolling {
 		
 		JavascriptExecutor js = (JavascriptExecutor)driver;// To typecast from Webdriver to JavascriptExecutor
 		
-		// To perform ScrollLeft operation
+		// To perform ScrollRight operation
 		js.executeScript("window.scrollBy(500,0)");
 		
 		Thread.sleep(2000);
 		
-		// To perform ScrollRight operation
+		// To perform ScrollLeft operation
 		js.executeScript("window.scrollBy(-150,0)");
 		Thread.sleep(2000);
 		

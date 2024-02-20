@@ -16,7 +16,7 @@ public class FlipkartWithSynchronization {
 			abc.manage().window().maximize();
 			abc.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));// Implicit wait for findElement() & findElements()
 			
-			WebDriverWait wait = new WebDriverWait(abc,Duration.ofSeconds(10));
+			WebDriverWait wait=	 new WebDriverWait(abc,Duration.ofSeconds(10));
 			//explicitWait.until(ExpectedConditions.elementToBeClickable(null))
 			abc.get("https://www.flipkart.com/");
 			
